@@ -1,0 +1,99 @@
+/* You can add global styles to this file, and also import other style files */
+.new-customer-journey {
+
+    .editor-tag {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      padding: 10px 15px;
+      background: #EAEAEA;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      height: 48px;
+      align-content: center;
+  
+      input[type=text] {
+        background: transparent;
+        border: none;
+        font-size: 14px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .selected-tag {
+      margin: 2px;
+      padding: 2px 20px 2px 10px;
+      border: 1px solid #27AE60;
+      border-radius: 13px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: white;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background: #27AE60;
+      cursor: pointer;
+  
+      i {
+        font-size: 8px;
+        position: absolute;
+        top: 7px;
+        right: 7px;
+      }
+    }
+  
+  }
+  .tag-listing-content {
+    height: 500px;
+    overflow-y: auto;
+  
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        margin-bottom: 2px;
+        padding: 6px 20px;
+        background-color: rgba(#F2F2F2,0.9);
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+  
+      }
+    }
+  
+    .img-indicata-wrapper {
+      display: flex;
+      flex-direction: row;
+  
+      span {
+        display: flex;
+        width: 100%;
+      }
+      img {
+        margin-left: 2px;
+        height: 42px;
+        display: flex;
+       }
+    }
+  }
+  
+  .tag-listing {
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  
+  .tag-content-container {
+    display: flex;
+  }
+  

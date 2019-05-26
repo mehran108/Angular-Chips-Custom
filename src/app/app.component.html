@@ -1,0 +1,28 @@
+<div class="new-customer-journey">
+  <div class="editor-tag">
+    <span aria-disabled="true" class="tag-item" *ngFor="let tag of tags; let i=index">
+      <span class="selected-tag">{{tag.name}}
+        <i class="icon-cross-slim" (click)="removeTag(tag,tags[i-1], i)">x</i></span>
+    </span>
+
+    <input [(ngModel)] = "searchText" [placeholder]="placeholder" type="text"
+      class="input-tag" (input)="onKeyUp($event.target.value)">
+
+  </div>
+</div>
+<div *ngIf="!loading; else loader">
+  <div class="tag-listing-content">
+    <ul>
+      <li *ngFor="let response of responseDropdown">
+        <div class="tag-listing" (click)="addTag(response)">
+          <div class="tag-content-container"> {{response?.name}}</div>
+          <div class="img-indicata-wrapper">
+            <span>
+              <img *ngFor="let link of response?.images" src="{{link?.href}}" alt="" />
+            </span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
